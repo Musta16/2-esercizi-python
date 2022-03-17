@@ -12,7 +12,9 @@ for i in range(len(l)): #ciclo per sommare tutti i numeri dentro la lista
     somma += l[i] #sommo "somma" al numero corrispondende all'indice
 
 media = somma/lenLista
+devStandFalsa = math.sqrt(somma / lenLista)
 
 print("La media è: ", media)
+print("La deviazine standard(falsa) è: ", devStandFalsa)
 print("Lista: ", l)
 print("Lungezza lista: ", len(l)) #printo lunghezza lista
