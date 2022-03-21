@@ -15,3 +15,7 @@ for i in listaConDuplicati:
     if i not in listaUnica: # appendi se il numero NON è già presente all'interno della nuova lista
         listaUnica.append(i)
 print(listaUnica)
+
+# 2. usando solo i set
+
+print(set(listaConDuplicati)) #facendo il set della listaConDubplicati elimina le ripetizioni
