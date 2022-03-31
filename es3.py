@@ -2,7 +2,7 @@
 
 import math
 
-# lunghezza lista 1
+# chiedere lunghezza lista 1
 while True:  # ciclo di controllo input
     try:
         lenLista = int(input("Quanti numeri vuoi inserire dentro le liste? "))  # chiedo la lungezza della lista
