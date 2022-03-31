@@ -3,6 +3,7 @@
 # costruire una nuova serie con solamente le parole più lunghe del numero
 # soluzioni: 1. liste SENZA comprehension - 2. liste CON comprehension
 
+# 1. liste SENZA comprehension
 lenLista = int(input("Quanti parole vuoi inserire dentro alla lista? ")) #chiedo la lungezza della lista
 listaString = [] #creo una lista per parole
 for i in range(lenLista): #ciclo for per inserire dentro la lista n valori decisi da utente
@@ -17,3 +18,8 @@ for e in listaString: # ciclo per controllare la lunghezza delle parole
         listaParoleLunghe.append(e)
 
 print("Ecco la lista di parole di lunghezza maggiori di",numConfronto, ": ", listaParoleLunghe)
+
+# 2. liste CON comprehension
+
+print("Stessa soluzione ma usando il comprehension: ",
+      [listaParoleLunghe.append(e) for e in listaString if (len(e) > numConfronto)])
