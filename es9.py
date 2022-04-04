@@ -4,22 +4,41 @@
 # soluzioni: 1. liste SENZA comprehension - 2. liste CON comprehension
 
 # 1. liste SENZA comprehension
-lenLista = int(input("Quanti parole vuoi inserire dentro alla lista? ")) #chiedo la lungezza della lista
-listaString = [] #creo una lista per parole
-for i in range(lenLista): #ciclo for per inserire dentro la lista n valori decisi da utente
-    parola_String = input("Insersci una parola: ")
-    listaString.append(parola_String)
 
-numConfronto = int(input("Inserisci un numero da memorizare: ")) # memorizzo un numero
+# chiedere lunghezza lista
+while True:  # ciclo di controllo input
+    try:
+        lenLista = int(input("Quanti numeri vuoi inserire dentro le liste? "))  # chiedo la lungezza della lista
+    except ValueError:  # eccezione
+        print("Non hai inserito un numero! Ritenta!")
+        continue
+    else:
+        break
 
-listaParoleLunghe = [] #creo una lista per le parole lunghe più di n
-for e in listaString: # ciclo per controllare la lunghezza delle parole
-    if len(e) > numConfronto:
-        listaParoleLunghe.append(e)
+# compilo lista
+l1 = []  # creo una lista
+for i in range(lenLista):  # ciclo for per inserire dentro la lista n valori decisi da utente
+    item = input("Insersci un numero: ")
+    l1.append(item)
 
-print("Ecco la lista di parole di lunghezza maggiori di",numConfronto, ": ", listaParoleLunghe)
+# chiedere un numero
+while True:  # ciclo di controllo input
+    try:
+        n = int(input("Inserisci un numero da memorizzare: "))  # chiedo la lungezza della lista
+    except ValueError:  # eccezione
+        print("Non hai inserito un numero! Ritenta!")
+        continue
+    else:
+        break
+
+listaNomiLunghi = []
+for i in l1:
+    if len(i) > n:
+        listaNomiLunghi.append(i)
+
+print("Lista nomi più lunghe di", n, "lettera/e:", listaNomiLunghi)
 
 # 2. liste CON comprehension
 
-print("Stessa soluzione ma usando il comprehension: ",
-      [listaParoleLunghe.append(e) for e in listaString if (len(e) > numConfronto)])
+listaComprehension = [i for i in l1 if (len(i) > n)]
+print("Stessa cosa con il comprehension:", listaComprehension)
